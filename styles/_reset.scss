@@ -1,0 +1,80 @@
+*,
+// *은 모든 요소들에게 값을 부여한다는 뜻
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+// 내가 이제부터 말하는 박스 사이즈는 컨텐츠 사이즈가 아니라 보더박스 값이야
+html {
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  word-break: keep-all;
+  text-wrap: balance;
+}
+
+a:not([class]) {
+  color: currentColor;
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+canvas,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}

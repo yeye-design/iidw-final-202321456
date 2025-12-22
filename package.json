@@ -1,0 +1,18 @@
+{
+  "name": "iidw-test",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "stylelint": "^16.26.1",
+    "stylelint-config-recess-order": "^7.4.0",
+    "stylelint-config-recommended-scss": "^16.0.2",
+    "stylelint-order": "^7.0.0"
+  }
+}
