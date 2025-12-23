@@ -393,12 +393,10 @@ html {
   transform: translateY(0);
 }
 .tilt-wrap {
-  width: 400px;
   perspective: 1000px; /* 3D 깊이 */
 }
 
 .tilt-img {
-  width: 100%;
   transform-style: preserve-3d;
   transition: transform 0.15s ease;
 }
