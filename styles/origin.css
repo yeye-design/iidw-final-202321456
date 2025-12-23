@@ -312,7 +312,7 @@ a {
 
 .textBox-noto-400 {
   flex-flow: column;
-  min-width: 480px;
+  min-width: 300px;
   max-width: 700px;
   padding-top: 15px;
   font-family: "Noto Sans KR", sans-serif;
@@ -455,4 +455,15 @@ html {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+.tilt-wrap {
+  width: 400px;
+  perspective: 1000px; /* 3D 깊이 */
+}
+
+.tilt-img {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease;
 }
