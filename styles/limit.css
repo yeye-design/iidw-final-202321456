@@ -300,9 +300,10 @@ a {
 }
 
 .textBox-noto-600 {
+  width: 100%;
   padding-top: 10px;
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 22px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
   font-optical-sizing: auto;
@@ -312,11 +313,13 @@ a {
 
 .textBox-noto-400 {
   flex-flow: column;
-  min-width: 300px;
+  min-width: 100%, 300px;
   max-width: 700px;
   padding-top: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   font-optical-sizing: auto;
