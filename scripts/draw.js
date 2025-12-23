@@ -35,27 +35,27 @@ const observer = new IntersectionObserver(
 reveals.forEach((el) => observer.observe(el));
 // 틸트
 
-const wrap = document.querySelector('.tilt-wrap');
-const img = document.querySelector('.tilt-img');
+document.querySelectorAll('.tilt-wrap').forEach((wrap) => {
+  const img = wrap.querySelector('.tilt-img');
+  if (!img) return;
 
-wrap.addEventListener('mousemove', (e) => {
-  const rect = wrap.getBoundingClientRect();
+  wrap.addEventListener('mousemove', (e) => {
+    const rect = wrap.getBoundingClientRect();
 
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
+    const x = e.offsetX;
+    const y = e.offsetY;
 
-  const centerX = rect.width / 2;
-  const centerY = rect.height / 2;
+    const rotateY = (x / rect.width - 0.5) * 15;
+    const rotateX = -(y / rect.height - 0.5) * 15;
 
-  const rotateX = -(y - centerY) / 50;
-  const rotateY = (x - centerX) / 50;
+    img.style.transform = `
+      rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)
+      scale(1.03)
+    `;
+  });
 
-  img.style.transform = `
-    rotateX(${rotateX}deg)
-    rotateY(${rotateY}deg)
-  `;
-});
-
-wrap.addEventListener('mouseleave', () => {
-  img.style.transform = 'rotateX(0deg) rotateY(0deg)';
+  wrap.addEventListener('mouseleave', () => {
+    img.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+  });
 });

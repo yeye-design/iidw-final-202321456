@@ -459,10 +459,16 @@ html {
 }
 
 .tilt-wrap {
+  pointer-events: auto;
   perspective: 1000px; /* 3D 깊이 */
 }
 
 .tilt-img {
   transform-style: preserve-3d;
   transition: transform 0.15s ease;
+}
+
+#cursor,
+.trail-circle {
+  pointer-events: none;
 }
